@@ -15,6 +15,7 @@ $json = "[";
 while($row = mysqli_fetch_array($result)){
 	$error = 0;
 	$json.='{';
+	$json.='"id":'.$row['id'].',';
 	$json.='"catalogueNo":"'.$row['catalogue_no'].'",';
 	$json.='"productName":"'.$row['product_name'].'",';
 	$json.='"casNo":"'.$row['cas_no'].'",';

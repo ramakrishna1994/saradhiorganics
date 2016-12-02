@@ -1,7 +1,10 @@
-
-	$('#headerMain').load("header.html")
-	$('#footer').load("footer.html")
-	$(document).ready(function(){
+	
+	$('#headerMain').load("header.html",function(){
+		$(".button-collapse").sideNav();
+	})
 		
-		$(".button-collapse").sideNav()
-	});
+	
+	$('#footer').load("footer.html")
+	
+
+	
