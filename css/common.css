@@ -1,13 +1,24 @@
   #footer {
         
-	background-image:url("../images/headerimage.jpg");
+	background-image:url("../images/headerimage2.jpg");
     }
 	 #headerNav {
-        background-image:url("../images/headerimage.jpg")
+        background-image:url("../images/headerimage2.jpg")
     }
 	
-	body{
-		background-color:#DCDCDC;
-		
+
+	.contactuscommon{
+		background-image: url('../images/contactus_1.jpg')
 	}
+
+	 body {
+	 	background-image:url("../images/bg.jpg");
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 	

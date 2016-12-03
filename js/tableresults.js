@@ -6,7 +6,7 @@ function getTableResults(){
 	var formData = new FormData();
 	formData.append( 'searchValue',searchValue);
 	var innerhtml = '<span >'
-					+'<table class="centered striped">'
+					+'<table class="centered ">'
 					+'<thead>'
 					+'<tr>'
 					+'<th data-field="id">S.No</th>'
@@ -38,7 +38,7 @@ function getTableResults(){
 							}
 							for(var i=0;i<response.length-1;i++)
 							{
-								innerhtml += '	<tr>'
+								innerhtml += '	<tr >'
 											+'	<td>'+(i+1)+'</td>'
 											+'	<td>'+response[i].productName+'</td>'
 											+'	<td>'+response[i].casNo+'</td>'

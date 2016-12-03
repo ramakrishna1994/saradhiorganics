@@ -46,7 +46,7 @@ function getTableResults(){
 											+'	<td>'+(i+1)+'</td>'
 											+'	<td>'+response[i].productName+'</td>'
 											+'	<td>'+response[i].casNo+'</td>'
-											+'	<td><button data-target="deleteModal" class="btn modal-trigger" '
+											+'	<td><button data-target="deleteModal" class="btn " '
 											+'	onclick="deleteRecord('+response[i].id+')">Delete'
 											+'	<i class="material-icons right">close</i>'
 											+'	</button></td>'

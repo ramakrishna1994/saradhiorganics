@@ -21,25 +21,37 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	  <link rel="stylesheet" href="css/common.css">
-	  
+	  <style>
+				  	
+				  		/* label focus color */
+			   .input-field input[type=text]:focus + label {
+			     color: #ffffff;
+			}
+			/* label underline focus color */
+			   .input-field input[type=text]:focus {
+			     border-bottom: 1px solid #ffffff;
+			     box-shadow: 0 1px 0 0 #ffffff;
+			   }
+	  </style>
 	   
     </head>
 
     <body>
      
+     <header>
 <div class="navbar-fixed" id="headerMain">		
   
 </div>
 
-
+</header>
 	
 
-	
+	<main>
 	 <div class="row">
       <div class="col s12 m6">
 		<center><h5 class="header">CONTACT US</h5></center>
-        <div class="card-panel hoverable" >
-			 <div class="card-content">
+        <div class="card-panel hoverable contactuscommon" >
+			 <div class="card-content white-text">
 					
 						  <h6><b>Saradhi Organics</b></h6>
 						  
@@ -58,10 +70,10 @@
         </div>
 		
 		<center><h5 class="header">WHERE TO FIND US</h5></center>
-        <div class="card-panel hoverable" style="height:335px">
+        <div class="card-panel hoverable contactuscommon" style="height:335px;padding-right:2px">
 			 <div class="card-content">
 					
-						 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.1180187965792!2d78.41885719999999!3d17.501878800000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91cf64ddfde3%3A0xb72d77a3c197656c!2sAllwyn+Phase+I+Bus+Stop!5e0!3m2!1sen!2sin!4v1480672696392" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+						 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.1180187965792!2d78.41885719999999!3d17.501878800000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91cf64ddfde3%3A0xb72d77a3c197656c!2sAllwyn+Phase+I+Bus+Stop!5e0!3m2!1sen!2sin!4v1480672696392" width="580" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 						
         </div>
           
@@ -70,12 +82,12 @@
 		
       </div>
 	  
-	  <div class="col s12 m6">
+	  <div class="col s12 m6" >
 	  <center><h5 class="header">WRITE TO US</h5></center>
-        <div class="card-panel hoverable">
+        <div class="card-panel hoverable white-text contactuscommon"  >
 		<div class="row">
 			<div class="input-field col s12">
-			  <input id="name" type="text" class="validate">
+			  <input  id="name" type="text" class="validate">
 			  <label for="name">Enter Your Name : </label>
 			</div>
         </div>
@@ -106,6 +118,10 @@
       </div>
     </div>
 	</div>
+</main>
+
+
+
 
  	<footer class="page-footer" id="footer">
 		 
