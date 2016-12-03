@@ -71,7 +71,7 @@ function doLogin()
 							else
 							{
 								$('#status').html('<font color="green">Success</font>');
-								window.open("in.html","_self");
+								window.open("tablemodification.html","_self");
 							}
 						}
 						});

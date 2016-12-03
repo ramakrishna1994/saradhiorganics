@@ -1,8 +1,9 @@
   #footer {
-        background-color: black;
+        
+	background-image:url("../images/headerimage.jpg");
     }
 	 #headerNav {
-        background-color: black;
+        background-image:url("../images/headerimage.jpg")
     }
 	
 	body{

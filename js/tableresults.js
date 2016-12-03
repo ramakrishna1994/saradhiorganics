@@ -10,10 +10,8 @@ function getTableResults(){
 					+'<thead>'
 					+'<tr>'
 					+'<th data-field="id">S.No</th>'
-					+'<th data-field="id">Catalogue No</th>'
 					+'<th data-field="name">Product Name</th>'
 					+'<th data-field="price">CAS NO</th>'
-					+'<th data-field="price">Application</th>'
 					+'</tr>'
 					+'</thead>'
 					+'<tbody>';
@@ -42,10 +40,8 @@ function getTableResults(){
 							{
 								innerhtml += '	<tr>'
 											+'	<td>'+(i+1)+'</td>'
-											+'	<td>'+response[i].catalogueNo+'</td>'
 											+'	<td>'+response[i].productName+'</td>'
 											+'	<td>'+response[i].casNo+'</td>'
-											+'	<td>'+response[i].application+'</td>'
 											+'	</tr>';
 											
 								
