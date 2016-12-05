@@ -1,0 +1,61 @@
+
+	.nav.navbar-nav > li > a {
+		color:#FFD100;
+		margin:5px;
+		
+		border:1px solid white;
+		border-radius:40%;
+	}
+	
+	.nav.navbar-nav > li > a:hover{
+		color:black;
+		background-color:#FFD100;
+		border:1px solid orange;
+		cursor:pointer;
+		
+	}
+	
+	.nav.navbar-nav > li > ul > li > a {
+		color:red;
+		margin:2px;
+		
+		border:1px solid white;
+		border-radius:40%;
+	}
+	
+	.nav.navbar-nav > li > ul > li > a:hover{
+		color:black;
+		background-color:#FFD100;
+		border:1px solid orange;
+		
+	}
+	
+	.common{
+		
+		background-image:url('../images/headerimage.jpg')
+	}
+	.header-css{
+		color:white;
+		font-size:20px;
+	}
+	
+	#headerMain{
+		margin-bottom:58px;
+	}
+	
+	body{
+		background-image:url('../images/bg.jpg');
+		font-family: "new century schoolbook";
+	}
+	
+	.gap{
+			margin-top:20px;
+			
+		}
+		
+		footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
