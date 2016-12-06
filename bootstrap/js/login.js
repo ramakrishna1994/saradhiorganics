@@ -2,8 +2,7 @@
 
 function login()
 {
-	document.getElementById("loader").className = "preloader-wrapper small active";
-	document.getElementById("status").className = "input-field col s12 hide";
+	document.getElementById("status").innerHTML = fillLoader();
 	checkLoginParameters();
 }
 
@@ -14,8 +13,6 @@ function checkLoginParameters()
 				if(document.getElementById("username").value == "")
 				{
 					document.getElementById("username").focus();
-					document.getElementById("loader").className = "preloader-wrapper small active hide";
-					document.getElementById("status").className = "input-field col s12";
 					$('#status').html('<font color="red">Please Enter User Name</font>');
 					return false;
 				}
@@ -32,8 +29,6 @@ function checkLoginParameters()
 				if(document.getElementById("password").value == "")
 				{
 					document.getElementById("password").focus();
-					document.getElementById("loader").className = "preloader-wrapper small active hide";
-					document.getElementById("status").className = "input-field col s12";
 					$('#status').html('<font color="red">Please Enter Password</font>');
 					return false;
 				}
@@ -63,15 +58,13 @@ function doLogin()
 						contentType: false,
 						success: function (response) 
 						{
-							document.getElementById("loader").className = "preloader-wrapper small active hide";
-							document.getElementById("status").className = "input-field col s12";
 							console.log(response.error);
 							if(response.error == 1)
 								$('#status').html('<font color="red">The username and password you entered don\'t match.</font>');
 							else
 							{
 								$('#status').html('<font color="green">Success</font>');
-								window.open("tablemodification.html","_self");
+								window.open("modifywebsitedetails.html","_self");
 							}
 						}
 						});
@@ -79,5 +72,9 @@ function doLogin()
 }
 		
 
+function fillLoader(){
+	var loader = '<center><image src="images/loader.gif" height="30px" width="30px"></center>';
+	return loader;
+}
 
 

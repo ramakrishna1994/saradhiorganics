@@ -1,17 +1,16 @@
 getTableResults();
-
+var colors = ["danger","info","warning","default","success","active"];
 function getTableResults(){
-	
+	document.getElementById("main").innerHTML = fillLoader();
 	var searchValue = document.getElementById("searchValue").value;
 	var formData = new FormData();
 	formData.append( 'searchValue',searchValue);
-	var innerhtml = '<span >'
-					+'<table class="centered ">'
+	var innerhtml = '<table class="table table-bordered table-responsive" style="text-align:center">'
 					+'<thead>'
 					+'<tr>'
-					+'<th data-field="id">S.No</th>'
-					+'<th data-field="name">Product Name</th>'
-					+'<th data-field="price">CAS NO</th>'
+					+'<th><center>S.No.</center></th>'
+					+'<th><center>Product Name</center></th>'
+					+'<th><center>CAS No.</center></th>'
 					+'</tr>'
 					+'</thead>'
 					+'<tbody>';
@@ -28,17 +27,17 @@ function getTableResults(){
 						success: function (response) 
 						{
 							
-							fillLoader();
+							
 							
 							
 							if(response[response.length-1].error == 1)
 							{
-									document.getElementById("main").innerHTML = '<center>No Results Found</center>';
+									document.getElementById("main").innerHTML = '<center><font size="4px" color="red">No Results Found !!</font></center>';
 									return;
 							}
 							for(var i=0;i<response.length-1;i++)
 							{
-								innerhtml += '	<tr >'
+								innerhtml += '	<tr class="'+colors[i%6]+'">'
 											+'	<td>'+(i+1)+'</td>'
 											+'	<td>'+response[i].productName+'</td>'
 											+'	<td>'+response[i].casNo+'</td>'
@@ -47,7 +46,7 @@ function getTableResults(){
 								
 							}
 							
-							innerhtml+='</tbody></table></span>';
+							innerhtml+='</tbody></table>';
 							document.getElementById("main").innerHTML = innerhtml;
 						}
 						});
@@ -61,47 +60,6 @@ function getTableResults(){
 
 
 function fillLoader(){
-	var loader = '<center>'
-				  +'<div class="preloader-wrapper small active">'
-			  +'<div class="spinner-layer spinner-blue">'
-				+'<div class="circle-clipper left">'
-				  +'<div class="circle"></div>'
-				+'</div><div class="gap-patch">'
-				  +'<div class="circle"></div>'
-				+'</div><div class="circle-clipper right">'
-				  +'<div class="circle"></div>'
-				+'</div>'
-			  +'</div>'
-
-			  +'<div class="spinner-layer spinner-red">'
-+'				<div class="circle-clipper left">'
-				  +'<div class="circle"></div>'
-				+'</div><div class="gap-patch">'
-+'				  <div class="circle"></div>'
-				+'</div><div class="circle-clipper right">'
-+'				  <div class="circle"></div>'
-				+'</div>'
-			  +'</div>'
-
-+'			  <div class="spinner-layer spinner-yellow">'
-				+'<div class="circle-clipper left">'
-+'				  <div class="circle"></div>'
-				+'</div><div class="gap-patch">'
-+'				  <div class="circle"></div>'
-				+'</div><div class="circle-clipper right">'
-+'				  <div class="circle"></div>'
-				+'</div>'
-			  +'</div>'
-
-			  +'<div class="spinner-layer spinner-green">'
-				+'<div class="circle-clipper left">'
-				  +'<div class="circle"></div>'
-				+'</div><div class="gap-patch">'
-				+'  <div class="circle"></div>'
-				+'</div><div class="circle-clipper right">'
-+'				  <div class="circle"></div>'
-				+'</div>'
-			  +'</div>'
-			+'</div>'
-			+'</center>';
+	var loader = '<center><image src="images/loader.gif" height="70px" width="70px"></center>';
+	return loader;
 }

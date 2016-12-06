@@ -2,20 +2,21 @@
 
  
 getTableResults();
-
+var colors = ["danger","info","warning","default","success","active"];
 function getTableResults(){
 	
 	var searchValue = document.getElementById("searchValue").value;
 	var formData = new FormData();
 	document.getElementById("main").innerHTML = fillLoader();
 	formData.append( 'searchValue',searchValue);
-	var innerhtml = '<span >'
-					+'<table class="centered striped">'
+	var innerhtml = ''
+					+'<table class="table table-bordered table-responsive" style="text-align:center">'
 					+'<thead>'
 					+'<tr>'
-					+'<th data-field="id">S.No</th>'
-					+'<th data-field="name">Product Name</th>'
-					+'<th data-field="price">CAS NO</th>'
+					+'<th ><center>S.No</center></th>'
+					+'<th ><center>Product Name</center></th>'
+					+'<th ><center>CAS NO</center></th>'
+					+'<th ></th>'
 					+'</tr>'
 					+'</thead>'
 					+'<tbody>';
@@ -42,20 +43,19 @@ function getTableResults(){
 							}
 							for(var i=0;i<response.length-1;i++)
 							{
-								innerhtml += '	<tr>'
+								innerhtml += '	<tr class="'+colors[i%6]+'">'
 											+'	<td>'+(i+1)+'</td>'
 											+'	<td>'+response[i].productName+'</td>'
 											+'	<td>'+response[i].casNo+'</td>'
-											+'	<td><button data-target="deleteModal" class="btn " '
+											+'	<td><button class="btn btn-danger" '
 											+'	onclick="deleteRecord('+response[i].id+')">Delete'
-											+'	<i class="material-icons right">close</i>'
 											+'	</button></td>'
 											+'	</tr>';
 											
 								
 							}
 							
-							innerhtml+='</tbody></table></span>';
+							innerhtml+='</tbody></table>';
 							document.getElementById("main").innerHTML = innerhtml;
 						}
 						});
@@ -69,58 +69,13 @@ function getTableResults(){
 
 
 function fillLoader(){
-	var loader = '<center>'
-				  +'<div class="preloader-wrapper small active">'
-			  +'<div class="spinner-layer spinner-blue">'
-				+'<div class="circle-clipper left">'
-				  +'<div class="circle"></div>'
-				+'</div><div class="gap-patch">'
-				  +'<div class="circle"></div>'
-				+'</div><div class="circle-clipper right">'
-				  +'<div class="circle"></div>'
-				+'</div>'
-			  +'</div>'
-
-			  +'<div class="spinner-layer spinner-red">'
-+'				<div class="circle-clipper left">'
-				  +'<div class="circle"></div>'
-				+'</div><div class="gap-patch">'
-+'				  <div class="circle"></div>'
-				+'</div><div class="circle-clipper right">'
-+'				  <div class="circle"></div>'
-				+'</div>'
-			  +'</div>'
-
-+'			  <div class="spinner-layer spinner-yellow">'
-				+'<div class="circle-clipper left">'
-+'				  <div class="circle"></div>'
-				+'</div><div class="gap-patch">'
-+'				  <div class="circle"></div>'
-				+'</div><div class="circle-clipper right">'
-+'				  <div class="circle"></div>'
-				+'</div>'
-			  +'</div>'
-
-			  +'<div class="spinner-layer spinner-green">'
-				+'<div class="circle-clipper left">'
-				  +'<div class="circle"></div>'
-				+'</div><div class="gap-patch">'
-				+'  <div class="circle"></div>'
-				+'</div><div class="circle-clipper right">'
-+'				  <div class="circle"></div>'
-				+'</div>'
-			  +'</div>'
-			+'</div>'
-			+'</center>';
-
-			return loader;
+	var loader = '<center><image src="images/loader.gif" height="40px" width="40px"></center>';
+	return loader;
 }
 
 
 function deleteRecord(id){
-	document.getElementById("deleteStatus").innerHTML='<div class="progress">'
-          												+'	<div class="indeterminate"></div>'
-        											+'</div>';	
+	document.getElementById("deleteStatus").innerHTML = fillLoader();	
 	var formData = new FormData();
 	formData.append( 'id',id);
 	$(document).ready(function(){
@@ -178,8 +133,18 @@ function insertRecord(){
 }
 
 
-$(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
+function logout(){
+	$(document).ready(function(){
+					
+					$.ajax({
+						url: "php/logout.php",// give your url
+						processData: false,
+						contentType: false,
+						success: function (response) 
+						{
+							window.open("login.html","_self");
+						}
+						});
+				});
+}
 
