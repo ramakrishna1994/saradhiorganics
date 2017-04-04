@@ -1,14 +1,12 @@
-	
-	$('#headerMain').load("header.html",function(){
-		$(document).ready(function(){
-				 $(".button-collapse").sideNav();
-				
-				 $('.modal').modal();
-			});
+(function($){
+  $(function(){
+	$('#header').load('../header.html',function(){
+			$('.button-collapse').sideNav();
+	 })
+	 $('#footer').load('../footer.html')
+	 $('#searchModal').load('../searchmodal.html',function(){
+			$('.modal').modal();
 	})
-		
-	
-	$('#footer').load("footer.html")
-	
-
-	
+	 $('.carousel.carousel-slider').carousel({fullWidth: true});
+  }); // end of document ready
+})(jQuery); // end of jQuery name space

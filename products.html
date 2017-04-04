@@ -1,120 +1,92 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-	
-	<title>Products</title>
-     <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      
-      <!-- Compiled and minified CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Products | Saradhi Organics</title>
 
-		  
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	  
-	  <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      
-	  <!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	  <link rel="stylesheet" href="css/common.css">
-	  <style>
-		tr td {
-  line-height: 10px;
-  white-space:normal;
-}
-	</style>
-	   
-    </head>
-
-    <body>
-     <header>
-	
-<div class="navbar-fixed" id="headerMain">		
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="css/common.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+</head>
+<body>
+<div  id="header">		
+		<!--Header will be filled dynamically-->
   
 </div>
-</header>
-
+  
+  <div class="container-fluid" style="margin-top:20px;margin-left:20px;margin-right:20px;">
+	 
+    
 	
-<main>
-	
-	  
-	  
-	  
-	  
-	  
-	  <div class="row" >
-    <div class="col s8 " >
-	
-      <div class="row card-panel z-depth-5" style="border:1px solid orange">
-        <div class="input-field col s12 m12" >
-          <i class="material-icons prefix">search</i>
+      <div class="row" >
+		<div class="col s12 m8  blue-grey darken-1" style="padding-bottom:20px">
+        <div class="input-field " >
+          <i class="material-icons prefix white-text">search</i>
           <input id="searchValue" type="text" class="validate" onkeyup="getTableResults()">
-          <label for="searchValue">Search For The Products Using Any Field Mentioned Below</label>
-        </div>
-		
+          <label for="searchValue" class="white-text">Search For The Products Using Any Field Mentioned Below</label>
+        
 		<div id="main">
-		
 		<!--Will be filled dynamically-->
+		
+            </div>
 	
         </div>
+		    </div>
 		
-      </div>
-	  
-	  
+     
+	  <div class="col s12 m4  blue-grey darken-1" style="padding-bottom:20px">
+				
+				<h5 class="white-text center"> <b>Enquiry</b> </h5>
+				<div class="input-field col s12">
+				  <input id="email" type="text">
+				  <label for="email" class="white-text">Email Address : </label>
+				</div>
+				
+				<div class="input-field col s12 ">
+				  <input id="productname" type="text">
+				  <label for="productname" class="white-text">Product Name :</label>
+				</div>
+				
+				<div class="input-field col s12">
+				  <input id="casno" type="text">
+				  <label for="casno" class="white-text" >CAS No. :</label>
+				</div>
+				
+				<div class="col s12 center">
+				  <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Submit</a>
+				</div>
+			  
+			  
+			  
+	  </div>
+	  </div> 
 	  
     </div>
-	
-	<div class="col s4">
-		<div class="row card-panel z-depth-5" style="border:1px solid purple">
-				<center><h6 ><span class="blue-text">Enquiry</span></h6></center>
-				<div class="row">
-					<div class="input-field col s12">
-					  <input id="email" type="email"  style="height:40px">
-					  <label for="email" data-error="wrong" data-success="right">Email</label>
-					</div>
-					<div class="input-field col s12">
-					  <input id="product" type="text"  style="height:40px">
-					  <label for="product">Product Name</label>
-					</div>
-					<div class="input-field col s12">
-					  <input id="casno" type="email" style="height:40px">
-					  <label for="casno" >CAS No.</label>
-					</div>
-					
-					<center><a class="waves-effect waves-orange btn pink darken-3">Submit</a></center>
-				  </div>
-		
-		
-      </div>
-	</div>
+  
+    </div>
+  
+<div id="footer">
+	<!--footer will be filled dynamically-->	
+  
+</div>
+  
+  
+		 
+  <div id="searchModal" class="modal">
+    <!-- Search Modal will be filled dynamically -->
   </div>
   
-</main>
-	
-	
-	
-	
 
-	
-	
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/products.js"></script>
+  
 
- 	<footer class="page-footer" id="footer">
-		 
-	</footer>
-	
-	<script src="js/tableresults.js"></script>
-	<script src="js/common.js"></script>
-	
-	  
-	
-	     
-	</script>
-	
-    </body>
-  </html>
-        
+  </body>
+</html>

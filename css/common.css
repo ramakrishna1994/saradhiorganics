@@ -1,34 +1,39 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
 
-	
-	@import url('https://fonts.googleapis.com/css?family=Griffy|PT+Sans|Space+Mono');
-		nav{
-		font-family: 'PT Sans', sans-serif;
-
-			
-		}
-		
-		body{
-			font-family: 'Space Mono', monospace;
-		}
-	.mine {
+@import url('https://fonts.googleapis.com/css?family=Griffy|PT+Sans|Space+Mono|Revalia');
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+nav{
+	font-family: 'PT Sans', sans-serif;
+}		
+body{
+	font-family: 'Space Mono', monospace;
+}
+.mine {
     font-family: 'Griffy', cursive;
-  }
-  
-  .gap{
-	margin-top:20px;
-	margin-bottom:30px;
-  }
-
-	
-
-	 body {
-	 	
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-	
+}
+a .btn{
+	font-family: sans-serif;
+}
+.footer-link{
+	color:white;
+}
+.footer-link:hover{
+	color:black;
+}
+.social-link{
+	color:black;
+}
+.social-link:hover{
+	color:white;
+}
