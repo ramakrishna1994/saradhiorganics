@@ -6,7 +6,7 @@ function getTableResults(){
 	var formData = new FormData();
 	formData.append( 'searchValue',searchValue);
 	var innerhtml = '<span >'
-					+'<table class="centered ">'
+					+'<table class="centered striped">'
 					+'<thead>'
 					+'<tr>'
 					+'<th data-field="id">S.No</th>'

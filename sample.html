@@ -1,0 +1,225 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/home.css">
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Griffy|PT+Sans');
+		nav{
+		font-family: 'PT Sans', sans-serif;
+
+			
+		}
+	.mine {
+    font-family: 'Griffy', cursive;
+  }
+  
+  .gap{
+	margin-top:20px;
+	margin-bottom:30px;
+  }
+  
+  
+
+	
+
+	</style>
+ 
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  
+	 		 <div class="navbar-fixed" id="headerMain">		
+  
+</div>
+          
+		  
+    </head>
+
+	<main>
+    <body>
+	
+	<div class="container gap" >
+			<div class=" col s4 offset-s4">
+			<center><font size="6px"><span class="deep-purple-text center-align mine"><b>Welcome To Saradhi Organics...</b></span></font><br> 
+			 Established by a group of Veterans having vast experience in Chemicals,Bulk drugs and Pharmaceuticals , We have footprints over worldwide and take pride in doing trading and business with the best in the market leaders and innovators.</center>
+			 
+			 
+			</div>
+			
+		</div>
+		
+		<center><a class="carousel-item" ><img src="./images/carousel_1.jpg" width="1300" height="300"></a></center>
+	<br>
+		
+		
+		
+		 
+		 
+		
+		
+		
+		<div class="container gap">
+		 <div class="row">
+        <div class="col s4 m4">
+          <div class="card z-depth-5" style="border:1px solid black">
+            <div class="card-image">
+             <a href="contactus.html"> <img src="images/contact.jpg" height="200px"></a>
+              
+            </div>
+            <div class="card-content">
+			<span class="card-title blue-text text-darken-4">Want To Chat</span>
+              <p>We are more than ready to have a discussion or meet regarding any queries in any of the products or services we provide.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <div class="card-action">
+              <a href="contactus.html" class="purple-text text-darken-4">Contact Us</a>
+            </div>
+          </div>
+        </div>
+		
+		<div class="col s4 m4">
+          <div class="card z-depth-5" style="border:1px solid green">
+            <div class="card-image">
+             <a href="products.html"> <img src="images/products.jpg" height="200px"></a>
+              
+            </div>
+            <div class="card-content">
+			<span class="card-title red-text text-darken-4 ">Products</span>
+              <p >We do trading with different kinds of chemicals,intermediates and pharmaceuticals which can be seen in our catalog.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <div class="card-action">
+              <a href="products.html" class="purple-text text-darken-4">See Our Catalog</a>
+            </div>
+          </div>
+        </div>
+		
+		<div class="row">
+        <div class="col s4 m4">
+          <div class="card z-depth-5" style="border:1px solid red">
+            <div class="card-image">
+             <a href="enquiry.html"> <img src="images/quote.jpg" width="100px" height="200px" ></a>
+            </div>
+            <div class="card-content">
+			<span class="card-title green-text text-darken-4">Want Quotation</span>
+              <p>Want a sample for HPLC anaylsis, then you came to right place. Go Quotation will take you to the product which suits your business needs</p>
+            </div>
+            <div class="card-action">
+              <a href="enquiry.html" class="purple-text text-darken-4">Go To Quotation</a>
+            </div>
+          </div>
+        </div>
+		
+		
+      </div>
+	 </div>
+	 </div>
+	 
+	 
+	
+  
+  
+	 
+	 <!-- Modal Structure -->
+  <div id="searchModal" class="modal">
+    <div class="modal-content">
+     <form>
+        <div class="input-field">
+          <input id="search" type="search" placeholder="Search for Products Using CAS No. or Name">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+      <table class="centered striped">
+        <thead>
+          <tr>
+              <th data-field="id">Name</th>
+              <th data-field="name">Item Name</th>
+              <th data-field="price">Item Price</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  
+  
+	
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	  <script src="js/common.js"></script>
+         <script>
+			$(document).ready(function(){
+				 $(".button-collapse").sideNav();
+				 
+				 $('.carousel.carousel-slider').each(function() {
+					var view = $(this);
+					var firstImage = view.find('.carousel-item img').first();
+					var imageHeight = firstImage[0].naturalHeight;
+					if (imageHeight > 0) {
+					view.css('height', imageHeight / firstImage[0].naturalWidth * view.width());
+					}
+					else {
+					view.css('height', 400);
+					}
+					});
+				 $('.modal').modal();
+			});
+			
+		
+		 </script>
+
+    </body>
+	</main>
+	
+	 <footer class="page-footer pink darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Belongs to Saradhi Organics
+            <a class="grey-text text-lighten-4 right">Designed and Maintained By GoodCreed</a>
+            </div>
+          </div>
+        </footer>
+  </html>

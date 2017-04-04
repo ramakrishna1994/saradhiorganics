@@ -1,6 +1,23 @@
 
 	
-	
+	@import url('https://fonts.googleapis.com/css?family=Griffy|PT+Sans|Space+Mono');
+		nav{
+		font-family: 'PT Sans', sans-serif;
+
+			
+		}
+		
+		body{
+			font-family: 'Space Mono', monospace;
+		}
+	.mine {
+    font-family: 'Griffy', cursive;
+  }
+  
+  .gap{
+	margin-top:20px;
+	margin-bottom:30px;
+  }
 
 	
 
