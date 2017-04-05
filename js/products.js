@@ -1,18 +1,18 @@
 getTableResults();
 
 function getTableResults(){
-	fillLoader();
+	document.getElementById("main").innerHTML = fillLoader();
 	var searchValue = document.getElementById("searchValue").value;
 	var formData = new FormData();
 	formData.append( 'searchValue',searchValue);
 	var innerhtml = '<table class="centered bordered">'
 					+'<thead>'
-					+'<tr class="white-text">'
+					+'<tr class="indigo-text">'
 					+'<th data-field="name">Product Name</th>'
 					+'<th data-field="price">CAS No.</th>'
 					+'</tr>'
 					+'</thead>'
-					+'<tbody class="white-text">';
+					+'<tbody class="black-text" >';
 					
 	$(document).ready(function(){
 					
@@ -101,4 +101,6 @@ function fillLoader(){
 			  +'</div>'
 			+'</div>'
 			+'</center>';
+			
+			return loader;
 }

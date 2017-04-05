@@ -26,14 +26,18 @@ a .btn{
 	font-family: sans-serif;
 }
 .footer-link{
-	color:white;
+	color:black;
 }
 .footer-link:hover{
-	color:black;
+	color:white;
 }
 .social-link{
 	color:black;
 }
 .social-link:hover{
 	color:white;
+}
+.modal {
+	width: 75% !important ; 
+	height: 100% !important ; 
 }

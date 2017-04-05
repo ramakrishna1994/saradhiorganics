@@ -1,39 +1,17 @@
 <div class="modal-content">
-     <form>
+   
         <div class="input-field">
-          <input id="search" type="search" placeholder="Search for Products Using CAS No. or Name">
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <input id="search" type="search" placeholder="Search for Products Using CAS No. or Name" onkeyup="getSearchResults()" class="indigo-text">
+          <label class="label-icon" for="search"><i class="material-icons indigo-text">search</i></label>
           <i class="material-icons">close</i>
         </div>
-      </form>
-      <table class="centered striped">
-        <thead>
-          <tr>
-              <th data-field="id">Name</th>
-              <th data-field="name">Item Name</th>
-              <th data-field="price">Item Price</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
-        </tbody>
-      </table>
+      
+      <div id="searchdiv">
+		<!--Will be filled dynamically-->
+		
+            </div>
+			
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-blue btn-flat red white-text">X &nbsp;Close</a>
     </div>
