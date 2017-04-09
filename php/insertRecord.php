@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-require_once 'connection.php';
+require_once '../constant/connection.php';
 
 $productname=mysqli_real_escape_string($con,$_POST['productName']);
 $casno=mysqli_real_escape_string($con,$_POST['casNo']);

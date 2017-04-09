@@ -1,6 +1,6 @@
 ﻿<?php 
 
-require_once 'connection.php';
+require_once '../constant/connection.php';
 
 $searchValue=mysqli_real_escape_string($con,$_POST['searchValue']);
 //$searchValue="asd";

@@ -1,9 +1,11 @@
 <?php 
-//require_once '/home/vijaymerakii007/public_html/phpmailer/PHPMailerAutoload.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+//require_once '/home/saradhi66/public_html/phpmailer/PHPMailerAutoload.php';
 
 $db_host="localhost";
-$db_user="saradhi";
-$db_password="Saradhi@2";
+$db_user="root";
+$db_password="";
 $db_name="saradhi_organics";
 
 

@@ -2,7 +2,7 @@
 session_start();
 session_unset();
 
-require_once 'connection.php';
+require_once '../constant/connection.php';
 
 $username=mysqli_real_escape_string($con,$_POST['username']);
 $password=mysqli_real_escape_string($con,$_POST['password']);

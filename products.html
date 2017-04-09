@@ -41,23 +41,35 @@
 	  <div class="col s12 m4  blue-grey darken-1" style="padding-bottom:20px">
 				
 				<h5 class="white-text center"> <b>Enquiry</b> </h5>
+				
+				<div class="input-field col s12 center" id="status">
+				  <!-- status will be filled dynamically-->
+				
+				</div>
 				<div class="input-field col s12">
-				  <input id="email" type="text">
+				  <input id="email" type="text" class="white-text">
 				  <label for="email" class="white-text">Email Address : </label>
 				</div>
 				
 				<div class="input-field col s12 ">
-				  <input id="productname" type="text">
+				  <input id="productname" type="text" class="white-text">
 				  <label for="productname" class="white-text">Product Name :</label>
 				</div>
 				
 				<div class="input-field col s12">
-				  <input id="casno" type="text">
+				  <input id="casno" type="text" class="white-text">
 				  <label for="casno" class="white-text" >CAS No. :</label>
 				</div>
 				
+				<div class="input-field col s12">
+				  <input id="qty" type="text" class="white-text">
+				  <label for="qty" class="white-text" >Quantity :</label>
+				</div>
+				
+				<input id="comments" type="hidden" value="">
+				
 				<div class="col s12 center">
-				  <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Submit</a>
+				  <a class="waves-effect waves-light btn" onclick="sendQuery()"><i class="material-icons left">send</i>Submit</a>
 				</div>
 			  
 			  
@@ -86,6 +98,7 @@
   <script src="js/materialize.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/enquiry.js"></script>
   
 
   </body>
