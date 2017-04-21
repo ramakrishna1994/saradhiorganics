@@ -34,7 +34,7 @@ function getTableResults(){
 							
 							if(response[response.length-1].error == 1)
 							{
-									document.getElementById("main").innerHTML = '<center>No Results Found</center>';
+									document.getElementById("main").innerHTML = '<center><font color="red">No Results Found</font></center>';
 									return;
 							}
 							for(var i=0;i<response.length-1;i++)
@@ -71,7 +71,79 @@ function getTableResults(){
 }
 
 
+function editRecord(id){
+	$('#editModal').modal('open');
+	document.getElementById("editStatus").innerHTML=fillLoader();
+	var formData = new FormData();
+	formData.append('id',id);
+	$(document).ready(function(){
+					
+					$.ajax({
+						url: "php/getSingleRecord.php",// give your url
+						type: "POST",
+						data: formData,
+						dataType: 'json',
+						processData: false,
+						contentType: false,
+						success: function (response) 
+						{
+							if(response.error == 0){
+									document.getElementById("editStatus").innerHTML="";
+									document.getElementById("eproductName").value=response.productName;
+									document.getElementById("ecasNo").value=response.casNo;
+									document.getElementById("eid").value=response.id;
+							}
+							else{
+									document.getElementById("editStatus").innerHTML='<center><font color="red">Problem in Getting the record from database. Please Try Again</font></center>';
+								
+							}
+							
+						}
+						});
+				});
+}
 
+function updateRecord(){
+	var formData = new FormData();
+	var productName = document.getElementById("eproductName").value;
+	var casNo = document.getElementById("ecasNo").value;
+	var id = document.getElementById("eid").value;
+	document.getElementById("editStatus").innerHTML=fillLoader();
+	if(productName == ""){
+		document.getElementById("editStatus").innerHTML='<center><font color="red">Please Enter Product Name</font></center>';
+		return;
+	}
+	if(casNo == ""){
+		document.getElementById("editStatus").innerHTML='<center><font color="red">Please Enter CAS No</font></center>';
+		return;	
+	}
+	formData.append( 'productName',productName);
+	formData.append('casNo',casNo);
+	formData.append('id',id);
+	$(document).ready(function(){
+					
+					$.ajax({
+						url: "php/updateRecord.php",// give your url
+						type: "POST",
+						data: formData,
+						dataType: 'json',
+						processData: false,
+						contentType: false,
+						success: function (response) 
+						{
+							if(response.error == 0){
+									document.getElementById("editStatus").innerHTML='<center><font color="green">Successfully Updated the Record In Database</font></center>';
+									getTableResults();
+							}
+							else{
+									document.getElementById("editStatus").innerHTML='<center><font color="red">Problem in Updating Record In Database. Please Try Again</font></center>';
+								
+							}
+							
+						}
+						});
+				});
+}
 
 
 
@@ -93,9 +165,8 @@ function deleteRecord(id){
 						success: function (response) 
 						{
 							
-								//document.getElementById("deleteStatus").innerHTML='<center><font color="green">Record Deleted Successfully!!</font></center>';
 								var $toastContent = $('<span>Record Deleted Successfully!!</span>');
-								Materialize.toast($toastContent, 5000);
+								Materialize.toast($toastContent, 3000);
 								getTableResults();
 						}
 						});
@@ -210,4 +281,14 @@ function fillLoader(){
 			+'</center>';
 			
 			return loader;
+}
+
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
 }

@@ -88,6 +88,39 @@
 	
 	
 	
+	
+	
+	
+  <div id="editModal" class="modal modal-fixed-footer">
+    
+	<div class="modal-content">
+						<div class="input-field col s12 center" id="editStatus">
+							
+						</div>
+						
+						<div class="input-field col s12">
+						  <input id="eproductName" type="text" class="validate black-text" placeholder=" ">
+						  <label for="eproductName" class="black-text">Product Name</label>
+						</div>
+						
+						<div class="input-field col s12">
+						  <input id="ecasNo" type="text" class="validate black-text" placeholder=" ">
+						  <label for="ecasNo" class="black-text">CAS No.</label>
+						</div>
+						  <input id="eid" type="hidden" >
+						<div class="input-field col s12 center-align">
+							<button class="btn waves-effect waves-white indigo" type="submit" name="action" onclick="updateRecord()">Update Product
+							  </button>
+						</div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat red white-text">Close</a>
+    </div>
+</div>
+	
+	
+	
+	
 <div id="deleteModal" class="modal modal-fixed-footer">
     
 	<div class="modal-content">
