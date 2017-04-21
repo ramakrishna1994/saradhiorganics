@@ -72,7 +72,7 @@
 						</div>
 						
 						<div class="input-field col s12">
-						  <input id="casNo" type="password" class="validate black-text">
+						  <input id="casNo" type="text" class="validate black-text">
 						  <label for="casNo" class="black-text">CAS No.</label>
 						</div>
 						

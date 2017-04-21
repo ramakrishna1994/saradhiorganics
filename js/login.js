@@ -62,7 +62,7 @@ function doLogin()
 							else
 							{
 								$('#status').html('<font color="green">Success</font>');
-								window.open("Modify-Website-Details.html","_self");
+								window.open("cpanel.php","_self");
 							}
 						}
 						});

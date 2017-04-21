@@ -37,7 +37,7 @@ function getTableResults(){
 							for(var i=0;i<response.length-1;i++)
 							{
 								innerhtml += '	<tr >'
-											+'	<td title="response[i].productName | response[i].casNo">'+response[i].productName+'</td>'
+											+'	<td title="'+response[i].productName+' | '+response[i].casNo+'">'+response[i].productName+'</td>'
 											+'	<td>'+response[i].casNo+'</td>'
 											+'	</tr>';
 											
