@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 $db_host="localhost";
 $db_user="root";
-$db_password="";
+$db_password="root";
 $db_name="saradhi_organics";
 
 

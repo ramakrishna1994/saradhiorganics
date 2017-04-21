@@ -41,3 +41,10 @@ a .btn{
 	width: 75% !important ; 
 	height: 100% !important ; 
 }
+#toast-container {
+  top: auto !important;
+  left:auto !important;
+  right: 6%;
+  bottom: 4%;
+  
+}

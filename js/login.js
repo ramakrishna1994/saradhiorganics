@@ -1,23 +1,54 @@
-getTableResults();
+function login()
+{
+	document.getElementById("status").innerHTML = fillLoader();
+	checkLoginParameters();
+}
 
-function getTableResults(){
-	document.getElementById("main").innerHTML = fillLoader();
-	var searchValue = document.getElementById("searchValue").value;
-	var formData = new FormData();
-	formData.append( 'searchValue',searchValue);
-	var innerhtml = '<table class="centered bordered">'
-					+'<thead>'
-					+'<tr class="indigo-text">'
-					+'<th data-field="name">Product Name</th>'
-					+'<th data-field="price">CAS No.</th>'
-					+'</tr>'
-					+'</thead>'
-					+'<tbody class="black-text" >';
-					
-	$(document).ready(function(){
+
+
+function checkLoginParameters()
+{
+				if(document.getElementById("username").value == "")
+				{
+					document.getElementById("username").focus();
+					$('#status').html('<font color="red">Please Enter User Name</font>');
+					return false;
+				}
+			/******* Email verification
+				if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("loginemailid").value)))  
+				{  
+					document.getElementById("loginemailid").focus();
+					$('#loginstatus').html('<font color="red">Please Enter Valid Email address</font>');
+					return false;
+				  
+				}  
+			********/
+
+				if(document.getElementById("password").value == "")
+				{
+					document.getElementById("password").focus();
+					$('#status').html('<font color="red">Please Enter Password</font>');
+					return false;
+				}
+
+				return doLogin();
+
+
+}
+
+
+function doLogin()
+{
+				
+				var username = document.getElementById('username').value;
+				var password = document.getElementById('password').value;
+				var formData = new FormData();
+				formData.append( 'username', username);
+				formData.append( 'password',password );
+				$(document).ready(function(){
 					
 					$.ajax({
-						url: "php/tableResults.php",// give your url
+						url: "php/login.php",// give your url
 						type: "POST",
 						data: formData,
 						dataType: 'json',
@@ -25,36 +56,19 @@ function getTableResults(){
 						contentType: false,
 						success: function (response) 
 						{
-							
-							
-							
-							
-							if(response[response.length-1].error == 1)
+							console.log(response.error);
+							if(response.error == 1)
+								$('#status').html('<font color="red">The username and password you entered don\'t match.</font>');
+							else
 							{
-									document.getElementById("main").innerHTML = '<center>No Results Found</center>';
-									return;
+								$('#status').html('<font color="green">Success</font>');
+								window.open("Modify-Website-Details.html","_self");
 							}
-							for(var i=0;i<response.length-1;i++)
-							{
-								innerhtml += '	<tr >'
-											+'	<td title="response[i].productName | response[i].casNo">'+response[i].productName+'</td>'
-											+'	<td>'+response[i].casNo+'</td>'
-											+'	</tr>';
-											
-								
-							}
-							
-							innerhtml+='</tbody></table>';
-							document.getElementById("main").innerHTML = innerhtml;
 						}
 						});
 				});
-				
 }
-
-
-
-
+		
 
 
 function fillLoader(){

@@ -12,7 +12,7 @@ $result=mysqli_query($con,$deletequery) or die(mysqli_error($con));
 			
 
 
-$json.='{"error":0}';
+$json='{"error":0}';
 
 
 echo $json;
