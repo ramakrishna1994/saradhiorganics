@@ -7,7 +7,7 @@ function getTableResults(){
 	formData.append( 'searchValue',searchValue);
 	var innerhtml = '<table class="centered bordered">'
 					+'<thead>'
-					+'<tr class="white-text card indigo">'
+					+'<tr class="white-text card indigo z-depth-5">'
 					+'<th data-field="name">Product Name</th>'
 					+'<th data-field="price">CAS No.</th>'
 					+'</tr>'
