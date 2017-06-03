@@ -8,8 +8,10 @@ function getTableResults(){
 	var innerhtml = '<table class="centered bordered">'
 					+'<thead>'
 					+'<tr class="white-text card indigo z-depth-5">'
-					+'<th data-field="name">Product Name</th>'
-					+'<th data-field="price">CAS No.</th>'
+					+'<th>S.No.</th>'
+					+'<th>Product Name</th>'
+					+'<th>CAS No.</th>'
+					+'<th></th>'
 					+'</tr>'
 					+'</thead>'
 					+'<tbody class="black-text" >';
@@ -37,8 +39,10 @@ function getTableResults(){
 							for(var i=0;i<response.length-1;i++)
 							{
 								innerhtml += '	<tr class="card z-depth-5">'
+											+'	<td>'+(i+1)+'</td>'
 											+'	<td title="'+response[i].productName+' | '+response[i].casNo+'">'+response[i].productName+'</td>'
 											+'	<td>'+response[i].casNo+'</td>'
+											+'	<td><a class="btn-floating btn-small waves-effect waves-light indigo"><i class="material-icons" onclick="showEnquiryFormForProduct('+response[i].id+',\''+response[i].productName+'\',\''+response[i].casNo+'\')">shopping_cart</i></a></td>'
 											+'	</tr>';
 											
 								
@@ -53,7 +57,17 @@ function getTableResults(){
 }
 
 
-
+function showEnquiryFormForProduct(id,name,casNo){
+	$('#enquiryModal').modal('open');
+	document.getElementById("status").innerHTML="";
+	document.getElementById("productname").focus();
+	document.getElementById("productname").value=name;
+	document.getElementById("casno").focus();
+	document.getElementById("casno").value=casNo;
+	document.getElementById("qty").focus();
+	document.getElementById("qty").value="";
+	document.getElementById("email").value="";
+}
 
 
 
