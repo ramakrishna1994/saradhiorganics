@@ -7,7 +7,7 @@ function getTableResults(){
 	formData.append( 'searchValue',searchValue);
 	var innerhtml = '<table class="centered bordered">'
 					+'<thead>'
-					+'<tr class="indigo-text">'
+					+'<tr class="white-text card indigo">'
 					+'<th data-field="name">Product Name</th>'
 					+'<th data-field="price">CAS No.</th>'
 					+'</tr>'
@@ -36,7 +36,7 @@ function getTableResults(){
 							}
 							for(var i=0;i<response.length-1;i++)
 							{
-								innerhtml += '	<tr >'
+								innerhtml += '	<tr class="card z-depth-5">'
 											+'	<td title="'+response[i].productName+' | '+response[i].casNo+'">'+response[i].productName+'</td>'
 											+'	<td>'+response[i].casNo+'</td>'
 											+'	</tr>';
