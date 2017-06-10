@@ -41,7 +41,7 @@ function getTableResults(){
 							{
 								innerhtml += '	<tr >'
 											+'	<td>'+(i+1)+'</td>'
-											+'	<td>'+response[i].productName+'</td>'
+											+'	<td><a target="_blank" href="product.php?id='+response[i].id+'&name='+response[i].productName+'&casno='+response[i].casNo+'">'+response[i].productName+'</a></td>'
 											+'	<td>'+response[i].casNo+'</td>'
 											+'	<td id="del'+response[i].id+'">'
 											+'		<div class="horizontal">'

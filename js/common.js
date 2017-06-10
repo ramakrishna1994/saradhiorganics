@@ -56,7 +56,7 @@ function getSearchResults(){
 							for(var i=0;i<response.length-1;i++)
 							{
 								innerhtml += '	<tr >'
-											+'	<td>'+response[i].productName+'</td>'
+											+'	<td><a target="_blank" href="product.php?id='+response[i].id+'&name='+response[i].productName+'&casno='+response[i].casNo+'">'+response[i].productName+'</a></td>'
 											+'	<td>'+response[i].casNo+'</td>'
 											+'	</tr>';
 											

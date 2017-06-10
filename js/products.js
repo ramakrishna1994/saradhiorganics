@@ -40,7 +40,7 @@ function getTableResults(){
 							{
 								innerhtml += '	<tr class="card z-depth-5">'
 											+'	<td>'+(i+1)+'</td>'
-											+'	<td title="'+response[i].productName+' | '+response[i].casNo+'">'+response[i].productName+'</td>'
+											+'	<td title="'+response[i].productName+' | '+response[i].casNo+'"><a target="_blank" href="product.php?id='+response[i].id+'&name='+response[i].productName+'&casno='+response[i].casNo+'">'+response[i].productName+'</a></td>'
 											+'	<td>'+response[i].casNo+'</td>'
 											+'	<td><a class="btn-floating btn-small waves-effect waves-light indigo"><i class="material-icons" onclick="showEnquiryFormForProduct('+response[i].id+',\''+response[i].productName+'\',\''+response[i].casNo+'\')">shopping_cart</i></a></td>'
 											+'	</tr>';
