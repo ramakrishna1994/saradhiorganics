@@ -86,6 +86,7 @@ function updateTitle(value){
 						success: function (response) 
 						{
 							document.title = value + response.title;
+							$('head').append('<meta name="keywords" content="'+response.title+'">');
 						}
 						});
 				});
