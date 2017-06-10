@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'constant/connection.php';
+require_once '../constant/connection.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -13,5 +13,5 @@ while($row = mysqli_fetch_array($result)){
 	$title.='name:'.$row['product_name'].' | casno:'.$row['cas_no'].' | ';
 }
 
-echo $title;
+echo '{"title":"'.$title.'"}';
 ?>
